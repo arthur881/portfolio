@@ -7,7 +7,81 @@
 *, ::after, ::before {
   margin: 0;
   padding: 0;
+  font-size: 10px;
   box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+body #menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #181818;
+  transform: translateY(-100vh);
+  transition: transform 0.6s cubic-bezier(0.93, 0, 0.57, 0.93);
+  transition-delay: 250ms;
+  transition-property: transform;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body #menu div {
+  width: 80%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+body #menu div a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+body #menu div:nth-child(1) {
+  justify-content: flex-start;
+  border-top: 1px solid #3F3F3F;
+  border-bottom: 1px solid #3F3F3F;
+}
+body #menu div:nth-child(2) {
+  justify-content: center;
+  border-bottom: 1px solid #3F3F3F;
+}
+body #menu div:nth-child(3) {
+  justify-content: flex-end;
+  border-bottom: 1px solid #3F3F3F;
+}
+body #menu.show {
+  transform: translateY(0);
+}
+body #menu-transition {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  transform: translateY(-100vh);
+  transition: transform 0.7s cubic-bezier(0.93, 0, 0.57, 0.93);
+  z-index: 99;
+}
+body #menu-transition.show {
+  transform: translateY(0);
+}
+body header #btn-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 4rem;
+  font-family: "Pathway Gothic One", sans-serif;
+  z-index: 101;
+}
+body header #btn-menu.show {
+  color: white;
 }
 
 /*# sourceMappingURL=build.css.map */
