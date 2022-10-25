@@ -115,6 +115,52 @@ body {
         #btn-menu.show {
             color: white;
         }
-        
+    }
+    main {
+        height: 3000px;
+        margin: 0 auto;
+        padding: 0 60px;
+        // background-color: lightblue;
+        .hero{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+            // background-color: bisque;
+            #heroTxt {
+                max-width: 1000px;
+                .word {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    .char {
+                        transform: translateY(-100%);
+                        transition: transform .5s;
+                        font-family: 'Trirong', serif;
+                        font-size: 17rem;
+                        font-weight: 500;
+                        line-height: 25rem;
+                    }
+                }
+                
+            }
+            .heroBottom {
+                width: 100%;
+                max-width: 1000px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                transform: translateY(-40%);
+                
+                img:nth-child(1){
+                    width: 70px;
+                    height: fit-content;
+                }
+                img:nth-child(2){
+                    width: 200px;
+                }
+            }
+        }
     }
 }
