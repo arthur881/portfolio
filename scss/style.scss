@@ -29,49 +29,78 @@ body {
         @include mixin.flexcenter(column);
 
         div {
+            position: relative;
             width: 80%;
             height: 20vh;
             display: flex;
             align-items: center;
             padding: 0 100px;
-            a {
-                font-size: 2rem;
-                color: white;
-                text-decoration: none;
-                font-family: 'Karla', sans-serif;
-
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: 3.2rem;
+                    color: white;
+                    font-family: 'Karla', sans-serif;
+                }
+            }
+            div:nth-child(1) {
+                border-top: 1px solid #3F3F3F;
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: flex-start;
+                }
+            }
+            div:nth-child(2) {
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: center;
+                }
+            }
+            div:nth-child(3) {
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: flex-end;
+                }
+                
+            }
+            div::after{
+                bottom: 0;
+                right: 0;
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 0;
+                background: white;
+                transition: width 0.4s ease;
+            }
+            div:nth-child(1):hover::after {
+                width: 90%;
+            }
+            div:nth-child(2):hover::after {
+                width: 60%;
+            }
+            div:nth-child(3):hover::after {
+                width: 30%;
             }
         }
-        div:nth-child(1) {
-            justify-content: flex-start;
-            border-top: 1px solid #3F3F3F;
-            border-bottom: 1px solid #3F3F3F;
+        #menu.show {
+            transform: translateY(0);
         }
-        div:nth-child(2) {
-            justify-content: center;
-            border-bottom: 1px solid #3F3F3F;
+        #menu-transition {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            transform: translateY(-100vh);
+            transition: transform 0.7s cubic-bezier(0.93, 0, 0.57, 0.93);
+            z-index: 99;
         }
-        div:nth-child(3) {
-            justify-content: flex-end;
-            border-bottom: 1px solid #3F3F3F;
-            
+        #menu-transition.show {
+            transform: translateY(0);
         }
-    }
-    #menu.show {
-        transform: translateY(0);
-    }
-    #menu-transition {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        background-color: black;
-        transform: translateY(-100vh);
-        transition: transform 0.7s cubic-bezier(0.93, 0, 0.57, 0.93);
-        z-index: 99;
-    }
-    #menu-transition.show {
-        transform: translateY(0);
-    }
     header{
         #btn-menu {
             position: fixed;
