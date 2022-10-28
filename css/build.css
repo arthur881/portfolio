@@ -134,7 +134,7 @@ body main .hero #heroTxt .word {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 body main .hero #heroTxt .word .char {
-  transform: translateY(-100%);
+  transform: translateY(-50px);
   transition: transform 0.5s;
   font-family: "Trirong", serif;
   font-size: 17rem;
