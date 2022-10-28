@@ -156,5 +156,11 @@ body main .hero .heroBottom img:nth-child(1) {
 body main .hero .heroBottom img:nth-child(2) {
   width: 200px;
 }
+body main .bio {
+  width: 100%;
+}
+body main .bio img {
+  width: 100%;
+}
 
 /*# sourceMappingURL=build.css.map */
