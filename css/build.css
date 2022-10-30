@@ -114,9 +114,7 @@ body header #btn-menu.show {
   color: white;
 }
 body main {
-  height: 3000px;
   margin: 0 auto;
-  padding: 0 60px;
 }
 body main .hero {
   height: 100vh;
@@ -130,16 +128,19 @@ body main .hero {
 body main .hero #heroTxt {
   max-width: 1000px;
 }
+body main .hero #heroTxt span {
+  display: none !important;
+}
 body main .hero #heroTxt .word {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 body main .hero #heroTxt .word .char {
-  transform: translateY(-50px);
+  transform: translateY(-300px);
   transition: transform 0.5s;
   font-family: "Trirong", serif;
   font-size: 17rem;
   font-weight: 500;
-  line-height: 25rem;
+  line-height: 20rem;
 }
 body main .hero .heroBottom {
   width: 100%;

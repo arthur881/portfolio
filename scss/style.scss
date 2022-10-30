@@ -117,9 +117,8 @@ body {
         }
     }
     main {
-        height: 3000px;
         margin: 0 auto;
-        padding: 0 60px;
+        // padding: 0 60px;
         // background-color: lightblue;
         .hero{
             height: 100vh;
@@ -132,15 +131,19 @@ body {
             // background-color: bisque;
             #heroTxt {
                 max-width: 1000px;
+                span{
+                    display: none !important;
+                    // gsap make mylast char gone, fixed it with this span
+                }
                 .word {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                     .char {
-                        transform: translateY(-50px);
+                        transform: translateY(-300px);
                         transition: transform 0.5s;
                         font-family: 'Trirong', serif;
                         font-size: 17rem;
                         font-weight: 500;
-                        line-height: 25rem;
+                        line-height: 20rem;
                     }
                 }
                 
