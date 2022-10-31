@@ -215,59 +215,6 @@ body main .bio div a:hover {
 }
 body footer {
   background-color: #181818;
-  color: white;
-}
-body footer .footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px;
-}
-body footer .footer-top .footer-link {
-  width: 50%;
-  padding-right: 160px;
-  border-right: 1px solid #3F3F3F;
-}
-body footer .footer-top .footer-link ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-body footer .footer-top .footer-link ul li {
-  list-style: none;
-}
-body footer .footer-top .footer-link ul li a {
-  color: white;
-  text-decoration: none;
-  font-family: "Pathway Gothic One", sans-serif;
-  font-size: 5rem;
-}
-body footer .footer-top .footer-link ul li a:hover {
-  text-decoration: underline;
-}
-body footer .footer-top .footer-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 50%;
-  padding-left: 160px;
-}
-body footer .footer-top .footer-logo img {
-  width: 36px;
-}
-body footer .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60px 20px;
-}
-body footer .footer-bottom p {
-  font-size: 1.6rem;
-  font-weight: 200;
-}
-body footer .footer-bottom img {
-  width: 36px;
-  cursor: pointer;
 }
 
-/*# sourceMappingURL=build.css.map */
+/*# sourceMappingURL=style.css.map */

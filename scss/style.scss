@@ -5,6 +5,17 @@
     font-family: 'Pathway Gothic One', sans-serif;
     font-family: 'Karla', sans-serif;
 */
+@keyframes go2top {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    0% {
+        transform: translateY(0);
+    }
+}
 
 *, ::after, ::before {
     margin: 0;
@@ -12,9 +23,19 @@
     font-size: 10px;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     position: relative;
+    h2 {
+        font-size: 6rem;
+        font-family: 'Pathway Gothic One', sans-serif;
+    }
+    p {
+        font-size: 2.3rem;
+        font-family: 'Karla', sans-serif;
+    }
 
     #menu {
         position: fixed;
@@ -128,6 +149,9 @@ body {
             align-items: center;
             justify-content: center;
             padding-top: 120px;
+            position: sticky;
+            top: 0;
+            z-index: -1;
             // background-color: bisque;
             #heroTxt {
                 max-width: 1000px;
@@ -150,26 +174,107 @@ body {
             }
             .heroBottom {
                 width: 100%;
-                max-width: 1000px;
+                max-width: 900px;
                 display: flex;
                 align-items: flex-end;
                 justify-content: space-between;
                 transform: translateY(-40%);
                 
-                img:nth-child(1){
+                .heroImg1{
                     width: 70px;
                     height: fit-content;
+                    animation: go2top 1.5s infinite;
                 }
-                img:nth-child(2){
+                .heroImg2{
                     width: 200px;
                 }
             }
         }
         .bio {
             width: 100%;
+            background-color: white;
             img {
                 width: 100%;
             }
+            div {
+                max-width: 1200px;
+                margin: 70px auto;
+                h2 {
+                    text-align: center;
+                    padding-bottom: 80px;
+                }
+                p {
+                    padding-bottom: 50px;
+                }
+                span {
+                    font-size: 2.3rem;
+                    font-weight: 600;
+                }
+                a {
+                    font-size: 2.3rem;
+                    color: black;
+                }
+                a:hover {
+                    font-weight: 600;
+                }
+            }
+            
         }
     }
+    footer {
+        background-color: #181818;
+        color: white;
+        .footer-top {
+            @include mixin.flexcenter();
+            padding: 70px;
+            .footer-link {
+                width: 50%;
+                padding-right: 160px;
+                border-right: 1px solid #3F3F3F;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    li {
+                        list-style: none;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-family: 'Pathway Gothic One', sans-serif;
+                            font-size: 5rem;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                width: 50%;
+                padding-left: 160px;
+                img {
+                    width: 36px;
+                }
+            }
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px 20px;
+            p {
+                font-size: 1.6rem;
+                font-weight: 200;
+            }
+            img {
+                width: 36px;
+                cursor: pointer;
+            }
+        }
+    }
+
 }
