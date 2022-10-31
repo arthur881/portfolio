@@ -28,6 +28,8 @@ html {
 
 body {
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 body h2 {
   font-size: 6rem;
@@ -194,6 +196,7 @@ body main .bio img {
 body main .bio div {
   max-width: 1200px;
   margin: 70px auto;
+  margin-bottom: 0;
 }
 body main .bio div h2 {
   text-align: center;
@@ -212,6 +215,86 @@ body main .bio div a {
 }
 body main .bio div a:hover {
   font-weight: 600;
+}
+body main .home-project {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+body main .home-project h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+body main .home-project .first-menu-item {
+  border-top: 1px solid #11181E;
+}
+body main .home-project .menu-item {
+  height: 170px;
+  border-bottom: 1px solid #11181E;
+  text-decoration: none;
+  position: relative;
+}
+body main .home-project .menu-item .span-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  /*
+  span {
+      mix-blend-mode: difference;
+  }
+  */
+}
+body main .home-project .menu-item .span-wrapper span:nth-child(1) {
+  font-family: "Trirong", serif;
+  font-size: 4.8rem;
+  color: black;
+}
+body main .home-project .menu-item .span-wrapper span:nth-child(2) {
+  font-family: "Karla", sans-serif;
+  font-size: 2.4rem;
+  color: black;
+}
+body main .home-project .menu-item .hover-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 300px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(0, 300px);
+  transition: 0.2s ease-out;
+}
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
+  overflow: hidden;
+}
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .hover-reveal_img {
+  background-size: cover;
+  background-position: 50% 50%;
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
+  transform: scale(0.8, 0.8);
+  transition: 1.5s transform;
+}
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .one {
+  background-image: url(../img/medT1.jpg);
+}
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .two {
+  background-image: url(../img/JPO1.jpg);
+}
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .three {
+  background-image: url(../img/medT1.jpg);
 }
 body footer {
   background-color: #181818;

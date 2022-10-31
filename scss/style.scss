@@ -28,6 +28,8 @@ html {
 }
 body {
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
     h2 {
         font-size: 6rem;
         font-family: 'Pathway Gothic One', sans-serif;
@@ -199,6 +201,7 @@ body {
             div {
                 max-width: 1200px;
                 margin: 70px auto;
+                margin-bottom: 0;
                 h2 {
                     text-align: center;
                     padding-bottom: 80px;
@@ -219,6 +222,87 @@ body {
                 }
             }
             
+        }
+        .home-project {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            h2 {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .first-menu-item {
+                border-top: 1px solid #11181E;
+            }
+            .menu-item {
+                height: 170px;
+                border-bottom: 1px solid #11181E;
+                text-decoration: none;
+                position: relative;
+                .span-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 100%;
+                    /*
+                    span {
+                        mix-blend-mode: difference;
+                    }
+                    */
+                    span:nth-child(1) {
+                        font-family: 'Trirong', serif;
+                        font-size: 4.8rem;
+                        color: black;
+                    }
+                    span:nth-child(2) {
+                        font-family: 'Karla', sans-serif;
+                        font-size: 2.4rem;
+                        color: black;
+                    }
+                }
+                .hover-reveal {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 550px;
+                    height: 300px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translate(0, 300px);
+                    transition: 0.2s ease-out;
+                    .hover-reveal_inner {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        will-change: transform;
+                        overflow: hidden;
+                        .hover-reveal_img {
+                            background-size: cover;
+                            background-position: 50% 50%;
+                            transform-origin: 50% 50%;
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            will-change: transform;
+                            transform: scale(0.8, 0.8);
+                            transition: 1.5s transform;
+
+                        }
+                        .one{
+                            background-image: url(../img/medT1.jpg);
+                        }
+                        .two{
+                            background-image: url(../img/JPO1.jpg);
+                        }
+                        .three{
+                            background-image: url(../img/medT1.jpg);
+                        }
+                    }
+                }
+            }
         }
     }
     footer {
