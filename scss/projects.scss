@@ -5,25 +5,12 @@
     font-family: 'Pathway Gothic One', sans-serif;
     font-family: 'Karla', sans-serif;
 */
-@keyframes go2top {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-    0% {
-        transform: translateY(0);
-    }
-}
-
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     font-size: 10px;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
@@ -141,165 +128,66 @@ body {
         }
     }
     main {
+        max-width: 1200px;
         margin: 0 auto;
-        .hero{
-            height: 100vh;
-            width: 100%;
+        padding-top: 100px;
+
+        .project {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding-top: 120px;
-            position: sticky;
-            top: 0;
-            z-index: -1;
-            #heroTxt {
-                max-width: 1000px;
-                span{
-                    display: none !important;
-                    // gsap make mylast char gone, fixed it with this span
+            margin: 40px 0;
+
+            .project-img-wrapper {
+                width: 60%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transform: scale(1);
+                    transition: transform .3s ease-in-out;
                 }
-                .word {
-                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    .char {
-                        transform: translateY(-300px);
-                        transition: transform 0.5s;
-                        font-family: 'Trirong', serif;
-                        font-size: 17rem;
-                        font-weight: 500;
-                        line-height: 20rem;
-                    }
-                }
-                
-            }
-            .heroBottom {
-                width: 100%;
-                max-width: 900px;
-                display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
-                transform: translateY(-40%);
-                
-                .heroImg1{
-                    width: 70px;
-                    height: fit-content;
-                    animation: go2top 1.5s infinite;
-                    
-                }
-                .heroImg2{
-                    width: 200px;
+                img:hover {
+                    transform: scale(1.1);
                 }
             }
-        }
-        .bio {
-            width: 100%;
-            background-color: white;
-            img {
-                width: 100%;
-            }
-            div {
-                max-width: 1200px;
-                margin: 70px auto;
-                margin-bottom: 0;
-                h2 {
-                    text-align: center;
-                    padding-bottom: 80px;
-                }
-                p {
-                    padding-bottom: 50px;
-                }
-                span {
-                    font-size: 2.3rem;
-                    font-weight: 600;
-                }
-                a {
-                    font-size: 2.3rem;
-                    color: black;
-                }
-                a:hover {
-                    font-weight: 600;
-                }
-            }
-            
-        }
-        .home-project {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 0;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            h2 {
-                text-align: center;
-                padding-bottom: 20px;
-            }
-            .first-menu-item {
-                border-top: 1px solid #11181E;
-            }
-            .menu-item {
-                height: 170px;
-                border-bottom: 1px solid #11181E;
-                text-decoration: none;
-                position: relative;
-                .span-wrapper {
+            .project-info {
+                width: 40%;
+                margin-left: 20px;
+                padding: 0 20px;
+                .info-heading {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    height: 100%;
-                    /*
-                    span {
-                        mix-blend-mode: difference;
+                    padding-bottom: 15px;
+                    h2 {
+                        font-size: 4rem;
                     }
-                    */
-                    span:nth-child(1) {
-                        font-family: 'Trirong', serif;
-                        font-size: 4.8rem;
-                        color: black;
-                    }
-                    span:nth-child(2) {
-                        font-family: 'Karla', sans-serif;
-                        font-size: 2.4rem;
-                        color: black;
+                    p {
+                        font-family: 'Pathway Gothic One', sans-serif;
                     }
                 }
-                .hover-reveal {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 550px;
-                    height: 300px;
-                    opacity: 0;
-                    pointer-events: none;
-                    transform: translate(0, 300px);
-                    transition: 0.2s ease-out;
-                    .hover-reveal_inner {
-                        width: 100%;
-                        height: 100%;
-                        position: relative;
-                        will-change: transform;
-                        overflow: hidden;
-                        .hover-reveal_img {
-                            background-size: cover;
-                            background-position: 50% 50%;
-                            transform-origin: 50% 50%;
-                            width: 100%;
-                            height: 100%;
-                            position: relative;
-                            will-change: transform;
-                            transform: scale(0.8, 0.8);
-                            transition: 1.5s transform;
-
-                        }
-                        .hover-reveal-one{
-                            background-image: url(../img/medT1.jpg);
-                        }
-                        .hover-reveal-two{
-                            background-image: url(../img/JPO1.jpg);
-                        }
-                        .hover-reveal-three{
-                            background-image: url(../img/medT1.jpg);
-                        }
+                p {
+                    font-size: 2rem;
+                    padding-bottom: 25px;
+                }
+                h3 {
+                    font-size: 2.5rem;
+                    padding-bottom: 10px;
+                    font-family: 'Pathway Gothic One', sans-serif;
+                }
+                .technos {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding-bottom: 25px;
+                    img {
+                        width: 30px;
                     }
+                }
+                a {
+                    font-size: 2.2rem;
+                    font-family: 'Karla', sans-serif;
+                    color: black;
+                    text-decoration: none;
                 }
             }
         }
@@ -359,5 +247,4 @@ body {
             }
         }
     }
-
 }

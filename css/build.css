@@ -287,13 +287,13 @@ body main .home-project .menu-item .hover-reveal .hover-reveal_inner .hover-reve
   transform: scale(0.8, 0.8);
   transition: 1.5s transform;
 }
-body main .home-project .menu-item .hover-reveal .hover-reveal_inner .one {
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .hover-reveal-one {
   background-image: url(../img/medT1.jpg);
 }
-body main .home-project .menu-item .hover-reveal .hover-reveal_inner .two {
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .hover-reveal-two {
   background-image: url(../img/JPO1.jpg);
 }
-body main .home-project .menu-item .hover-reveal .hover-reveal_inner .three {
+body main .home-project .menu-item .hover-reveal .hover-reveal_inner .hover-reveal-three {
   background-image: url(../img/medT1.jpg);
 }
 body footer {
