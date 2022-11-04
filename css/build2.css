@@ -140,14 +140,36 @@ body main .project {
 body main .project .project-img-wrapper {
   width: 60%;
   overflow: hidden;
+  position: relative;
+}
+body main .project .project-img-wrapper .overlayLink {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 7px 15px;
+  border-radius: 15px;
+  opacity: 0;
+  color: black;
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  background-color: white;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 body main .project .project-img-wrapper img {
   width: 100%;
   transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  filter: blur(0);
 }
 body main .project .project-img-wrapper img:hover {
   transform: scale(1.1);
+  filter: blur(2px);
+}
+body main .project .project-img-wrapper:hover .overlayLink {
+  opacity: 1;
 }
 body main .project .project-info {
   width: 40%;
@@ -166,8 +188,9 @@ body main .project .project-info .info-heading h2 {
 body main .project .project-info .info-heading p {
   font-family: "Pathway Gothic One", sans-serif;
 }
-body main .project .project-info p {
+body main .project .project-info .project-info-p {
   font-size: 2rem;
+  min-height: 117px;
   padding-bottom: 25px;
 }
 body main .project .project-info h3 {
@@ -184,11 +207,139 @@ body main .project .project-info .technos {
 body main .project .project-info .technos img {
   width: 30px;
 }
-body main .project .project-info a {
+body main .project .project-info .a-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+}
+body main .project .project-info .a-container .the-arrow {
+  width: 64px;
+  transition: all 0.2s;
+}
+body main .project .project-info .a-container .the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+body main .project .project-info .a-container .the-arrow.-left > .shaft {
+  width: 0;
+  background-color: rgb(24, 24, 24);
+}
+body main .project .project-info .a-container .the-arrow.-left > .shaft:before, body main .project .project-info .a-container .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: rgb(24, 24, 24);
+}
+body main .project .project-info .a-container .the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+body main .project .project-info .a-container .the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+body main .project .project-info .a-container .the-arrow.-right {
+  top: 3px;
+}
+body main .project .project-info .a-container .the-arrow.-right > .shaft {
+  width: 64px;
+  transition-delay: 0.2s;
+}
+body main .project .project-info .a-container .the-arrow.-right > .shaft:before, body main .project .project-info .a-container .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+body main .project .project-info .a-container .the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+body main .project .project-info .a-container .the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+body main .project .project-info .a-container .the-arrow > .shaft {
+  background-color: rgb(24, 24, 24);
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+body main .project .project-info .a-container .the-arrow > .shaft:before, body main .project .project-info .a-container .the-arrow > .shaft:after {
+  background-color: rgb(24, 24, 24);
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+body main .project .project-info .a-container .the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+body main .project .project-info .a-container .the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+body main .project .project-info .a-container .animated-arrow {
+  display: inline-block;
+  color: rgb(24, 24, 24);
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+body main .project .project-info .a-container .animated-arrow:hover {
+  color: rgb(24, 24, 24);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: rgb(24, 24, 24);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .the-arrow.-left > .shaft:before, body main .project .project-info .a-container .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: rgb(24, 24, 24);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .main {
+  transform: translateX(80px);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+body main .project .project-info .a-container .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, body main .project .project-info .a-container .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+body main .project .project-info .a-container .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+body main .project .project-info .a-container .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+body main .project .project-info .a-container .animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+body main .project .project-info .a-container .animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
   font-size: 2.2rem;
   font-family: "Karla", sans-serif;
-  color: black;
-  text-decoration: none;
+  line-height: 1;
+}
+body main .project .project-info .a-container .animated-arrow > .main > .the-arrow {
+  position: relative;
 }
 body footer {
   background-color: #181818;
