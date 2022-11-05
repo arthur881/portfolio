@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Pathway+Gothic+One&family=Trirong:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+    
+}
+.closeBtn img {
+    width: 36px;
+}
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 500vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+
+    /*for ie & mozilla*/
+    -ms-overlow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+h1, h2 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 6rem;
+}
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+
+.slide-one div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 560px;
+    margin-right: 200px;
+}
+.slide-one div p {
+    max-width: 200px;
+}
+.slide-one img {
+    width: 950px;
+}
+.slide-two {
+    background-color: #F4F4F4;
+}
+.slide-three {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.slide-three h2 {
+    padding-right: 300px;
+}
+.slide-three p {
+    max-width: 940px;
+    font-size: 2.5rem;
+}
+
+.slide-four {
+    display: flex;
+    gap: 200px;
+    background-color: #F4F4F4;
+}
+
+.four-one {
+    margin-bottom: 200px;
+}
+.four-two {
+    margin-top: 200px;
+}
+.four-three {
+    margin-bottom: 100px;
+}
+.four-three h2 {
+    margin-top: 100px;
+}
+
+.slide-five {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.img-slide5 {
+    transform: translateX(270px);
+}
+.five-bottom {
+    display: flex;
+}
+.five-bottom div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.five-bottom div p {
+    max-width: 215px;
+}
