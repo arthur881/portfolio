@@ -445,3 +445,60 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 425px) {
+    
+    *, ::after, ::before {
+        font-size: 7px;
+    }
+
+    body {
+
+        #menu {
+            div {
+                a {
+                    justify-content: center !important;
+                }
+            }
+        }
+        main {
+            padding-top: 60px;
+            .project {
+                padding: 15px;
+                flex-direction: column;
+                .project-img-wrapper {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    .overlayLink {
+                        opacity: 1;
+                    }
+                    img {
+                        filter: blur(2px);
+                    }
+
+                }
+                .project-info {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+
+
+        
+        footer {
+            .footer-top {
+                padding: 50px !important;
+            }
+            .footer-link {
+                padding-right: 60px !important;
+            }
+            .footer-logo {
+                padding-left: 60px !important;
+            }
+        }
+    }
+    
+}

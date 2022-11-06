@@ -361,3 +361,83 @@ body {
     }
 
 }
+@media screen and (max-width: 425px) {
+    
+    *, ::after, ::before {
+        font-size: 7px;
+    }
+
+    body {
+
+        #menu {
+            div {
+                a {
+                    justify-content: center !important;
+                }
+            }
+        }
+        main {
+            .hero {
+                height: 82vh;
+                padding-top: 70px;
+                #heroTxt {
+                    max-width: 350px;
+                    .word {
+                        .char {
+                            font-size: 10rem;
+                        }
+                    }
+                }
+                .heroBottom {
+                    max-width: 340px;
+                    transform: translateY(0);
+                    .heroImg1{
+                        width: 70px;
+                        height: fit-content;
+                        animation: go2top 1.5s infinite;
+                        
+                    }
+                    .heroImg2{
+                        width: 120px;
+                    }
+                }
+            }
+            .bio {
+                div {
+                    padding: 0 30px;
+                }
+            }
+            .home-project {
+                max-width: 365px;
+                .span-wrapper {
+                    span:nth-child(1) {
+                        font-size: 2.5rem !important;
+                    }
+                    span:nth-child(2) {
+                        font-size: 1.6rem !important;
+                    }
+                }
+            }
+        }
+
+
+
+
+        .hover-reveal {
+            display: none;
+        }
+
+        footer {
+            .footer-top {
+                padding: 50px !important;
+            }
+            .footer-link {
+                padding-right: 60px !important;
+            }
+            .footer-logo {
+                padding-left: 60px !important;
+            }
+        }
+    }
+    
+}

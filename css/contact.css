@@ -70,3 +70,26 @@ input:focus{
 .form-icon img {
     width: 36px;
 }
+@media screen and (max-width: 425px) {
+    
+    *, ::after, ::before {
+        font-size: 7px;
+    }
+
+    main {
+        padding-top: 130px !important;
+    }
+    h2 {
+        padding-left: 15px !important;
+    }
+    body #menu div a{
+        justify-content: center
+    }
+
+    .form-wrapper {
+        width: 360px;
+    }
+    .form-wrapper::after {
+        left: 100px;
+    }
+}
