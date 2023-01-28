@@ -340,8 +340,51 @@ body {
                 gap: 30px;
                 width: 50%;
                 padding-left: 160px;
-                img {
-                    width: 36px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    color: white;
+                    text-decoration: none;
+                    p {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        span {
+                            display: inline-block;;
+                            transform: translateX(-100%);
+                            transition: transform 0.2s ease-out;
+                            visibility: hidden;
+                            font-size: 2.3rem;
+                            font-family: "Karla", sans-serif;
+                        }
+                    }
+                    img {
+                        width: 36px;
+                        transition: all 0.2s ease-out;
+                    }
+                }
+                a:hover {
+                    p {
+                        span {
+                            transform: translateX(0);
+                            visibility: visible;
+                        }
+                    }
+                    img {
+                        filter: drop-shadow(0px 3px 2px rgba(229, 229, 229, 0.16));
+                        transform: translateY(-3px);
+                    }
+                }
+                a:not(:hover) {
+                    p {
+                        span {
+                            transform: translateX(-100%);
+                            visibility: visible;
+                        }
+                    }
+                    img {
+                        filter: drop-shadow(0px 3px 2px rgba(229, 229, 229, 0));
+                        transform: translateY(0);
+                    }
                 }
             }
         }
