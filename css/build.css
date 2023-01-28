@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Pathway+Gothic+One&family=Trirong:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "histeagin";
+  src: url("../fonts/histeagin.ttf") format("truetype");
+}
 /*
     font-family: 'Trirong', serif;
     font-family: 'Pathway Gothic One', sans-serif;
@@ -165,7 +169,7 @@ body main .hero #heroTxt .word {
 body main .hero #heroTxt .word .char {
   transform: translateY(-300px);
   transition: transform 0.5s;
-  font-family: "Trirong", serif;
+  font-family: "histeagin", serif;
   font-size: 17rem;
   font-weight: 500;
   line-height: 20rem;
@@ -195,8 +199,7 @@ body main .bio img {
 }
 body main .bio div {
   max-width: 1200px;
-  margin: 70px auto;
-  margin-bottom: 0;
+  margin: 70px auto -10px auto;
 }
 body main .bio div h2 {
   text-align: center;
@@ -242,7 +245,7 @@ body main .home-project .menu-item .span-wrapper {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  margin: 0 20px;
+  margin: 0 50px;
   /*
   span {
       mix-blend-mode: difference;
@@ -389,6 +392,11 @@ body footer .footer-bottom img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+  body main .bio div {
+    margin: 70px 50px -10px 50px;
+  }
+}
 @media screen and (max-width: 425px) {
   *, ::after, ::before {
     font-size: 7px;
