@@ -4,10 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Arthur's Portfolio, Junior front-end web developer">
+    <meta name="keywords" content="developer, Dev, Web developer, junior, portfolio, HTML, CSS, SCSS, JavaScript, PHP, coding, code,">
+    <meta name="author" content="POUTEAU Arthur">
+    <link rel="canonical" href="https://portfolio-o2p3yw26q-arthur881.vercel.app/">
+
+    <!-- Meta Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio 2022, Arthur881 junior full stack web dev." />
+    <meta name="twitter:description" content="Arthur POUTEAU's portfolio, junior full stack web developer who loves tech !" />
+    <meta name="twitter:image" content="img/webDev.jpeg" />
+    
+    <!-- Meta Facebook -->
+    <meta property="og:title" content="Portfolio 2022, Arthur881 junior full stack web dev."/>
+    <meta property="og:type" content="siteweb"/>
+    <meta property="og:image" content="img/webDev.jpeg"/>
+    <meta property="og:url" content="https://portfolio-o2p3yw26q-arthur881.vercel.app/"/>
+    <meta property="og:description" content="Arthur POUTEAU's portfolio, junior full stack web developer who loves tech !"/>
+    <meta property="og:local" content="en_GB"/>
+    <meta property="og:site_name" content="Portfolio Arthur POUTEAU"/>
+
+    <!-- Rich snippet -->
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "POUTEAU Arthur",
+        "image": "img/webDev.jpeg",
+        "email": "arthur.pouteau@edu.devinci.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Paris",
+            "addressCountry": "FRANCE"
+        },
+        "url": "https://portfolio-o2p3yw26q-arthur881.vercel.app/"
+        }
+        </script>
+
     <link rel="stylesheet" href="css/build.css">
-    <title>Document</title>
+    <link rel="icon" href="img/atom.png">
+    <title>Portfolio | POUTEAU Arthur</title>
 </head>
 <body>
-    
+    <div id="menu">
+        <div>
+            <a href="index.html">Home</a>
+        </div>
+        <div>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div id="menu-transition"></div>
+    <header>
+        <p id="btn-menu">Menu</p>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 id="heroTxt">POUTEAU Arthur<span>.</span></h1>
+            <div class="heroBottom">
+                <a href="#sectioBio"><img class="heroImg1" src="img/arrowDown.png" alt="arrow icon"></a>
+                <img class="heroImg2" src="img/photoPro.jpg" alt="my photo">
+            </div>
+        </section>
+
+        <section class="bio">
+            <img src="img/buildings.jpg" alt="randmon building image">
+            
+            <div>
+                <h2>Welcome on my portfolio !</h2>
+                <p>I’m a student in <span>web developement</span> at IIM digital school, on this website you will have the opportunity to know me a bit better and discover my work.</p>
+                <p>I’m 22 years old, and so far I remember <span>I always loved tech</span> and how it influence the world.  So I logically reach to learn and control these tecnologies so I can be a part of this revolution. I start coding  with the basics Html & Css, then  I moved on javascript witch I’m still currenty working on.</p>
+                <p> I’m learning  everyday to <span>improve my skills</span>. So if you need a website or just want to talk about tech <a href="contact.html">contact me</a>.</p>
+            </div>
+        </section>
+
+        <section class="home-project">
+            <h2>Few projects:</h2>
+            <a href="singleProject1.html" id="first-menu-item" class="menu-item">
+                <div class="span-wrapper">
+                    <span>Med-T</span>
+                    <span>Design, prototype & code this immaginary t-shirt brand </span>
+                </div>
+                <div class="hover-reveal">
+                    <div class="hover-reveal_inner">
+                        <div class="hover-reveal_img hover-reveal-one"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="projects.html" class="menu-item">
+                <div class="span-wrapper">
+                    <span>JPO IIM</span>
+                    <span>Code a replica for an open day of IIM</span>
+                </div>
+                <div class="hover-reveal">
+                    <div class="hover-reveal_inner">
+                        <div class="hover-reveal_img hover-reveal-two"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="singleProject2.html" class="menu-item">
+                <div class="span-wrapper">
+                    <span>Movie Wiki</span>
+                    <span>Movie wiki using TMDB API</span>
+                </div>
+                <div class="hover-reveal">
+                    <div class="hover-reveal_inner">
+                        <div class="hover-reveal_img hover-reveal-three"></div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-link">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <a href="https://github.com/arthur881" target="_blank" rel="noopener noreferrer">
+                    <img src="img/github.png" alt="github icon">
+                    <p><span>Github</span></p>
+                </a>
+                <a href="https://fr.linkedin.com/in/arthur-pouteau-a9b90b207" target="_blank" rel="noopener noreferrer">
+                    <img src="img/linkedin.png" alt="linkedin icon">
+                    <p><span>Linkedin</span></p>
+                </a>
+                <a href="mailto:arthur.pouteau@edu.devinci.fr">
+                    <img src="img/email.png" alt="email icon">
+                    <p><span>Email</span></p>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <p>Pouteau Arthur, portfolio 2022</p>
+                <p>© All Rights reserved.</p>
+            </div>
+            <img src="img/darkMode.png" alt="dark mode icon">
+        </div>
+    </footer>
+
+    <!-- Split-Type lib to cut a string into char -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- GreenSock animation lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/homeProject.js"></script>
 </body>
 </html>

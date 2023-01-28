@@ -1,12 +1,499 @@
+@use "mixin";
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Pathway+Gothic+One&family=Trirong:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'histeagin';
+    src: url('../fonts/histeagin.ttf') format('truetype');
+}
 /*
     font-family: 'Trirong', serif;
     font-family: 'Pathway Gothic One', sans-serif;
     font-family: 'Karla', sans-serif;
 */
+@keyframes go2top {
+    0% { 
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    0% {
+        transform: translateY(0);
+    }
+}
 
 *, ::after, ::before {
     margin: 0;
     padding: 0;
+    font-size: 10px;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    h2 {
+        font-size: 6rem;
+        font-family: 'Pathway Gothic One', sans-serif;
+    }
+    p {
+        font-size: 2.3rem;
+        font-family: 'Karla', sans-serif;
+    }
+
+    #menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #181818;
+        transform: translateY(-100vh);
+        transition: transform 0.6s cubic-bezier(0.93, 0, 0.57, 0.93);
+        transition-delay: 250ms;
+        transition-property: transform;
+        z-index: 100;
+        @include mixin.flexcenter(column);
+
+        div {
+            position: relative;
+            width: 80%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: 3.2rem;
+                    color: white;
+                    font-family: 'Karla', sans-serif;
+                }
+            }
+            div:nth-child(1) {
+                border-top: 1px solid #3F3F3F;
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: flex-start;
+                }
+            }
+            div:nth-child(2) {
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: center;
+                }
+            }
+            div:nth-child(3) {
+                border-bottom: 1px solid #3F3F3F;
+                a {
+                    justify-content: flex-end;
+                }
+                
+            }
+            div::after{
+                bottom: 0;
+                right: 0;
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 0;
+                background: white;
+                transition: width 0.4s ease;
+            }
+            div:nth-child(1):hover::after {
+                width: 90%;
+            }
+            div:nth-child(2):hover::after {
+                width: 60%;
+            }
+            div:nth-child(3):hover::after {
+                width: 30%;
+            }
+        }
+        #menu.show {
+            transform: translateY(0);
+        }
+        #menu-transition {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            transform: translateY(-100vh);
+            transition: transform 0.7s cubic-bezier(0.93, 0, 0.57, 0.93);
+            z-index: 99;
+        }
+        #menu-transition.show {
+            transform: translateY(0);
+        }
+    header{
+        #btn-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 4rem;
+            font-family: 'Pathway Gothic One', sans-serif;
+            z-index: 101;
+        }
+        #btn-menu.show {
+            color: white;
+        }
+    }
+    main {
+        margin: 0 auto;
+        .hero{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+            position: sticky;
+            top: 0;
+            z-index: -1;
+            #heroTxt {
+                max-width: 1000px;
+                span{
+                    display: none !important;
+                    // gsap make mylast char gone, fixed it with this span
+                }
+                .word {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    .char {
+                        transform: translateY(-300px);
+                        transition: transform 0.5s;
+                        font-family: 'histeagin', serif;
+                        font-size: 17rem;
+                        font-weight: 500;
+                        line-height: 20rem;
+                    }
+                }
+                
+            }
+            .heroBottom {
+                width: 100%;
+                max-width: 900px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                transform: translateY(-40%);
+                
+                .heroImg1{
+                    width: 70px;
+                    height: fit-content;
+                    animation: go2top 1.5s infinite;
+                    
+                }
+                .heroImg2{
+                    width: 200px;
+                }
+            }
+        }
+        .bio {
+            width: 100%;
+            background-color: white;
+
+            img {
+                width: 100%;
+            }
+            div {
+                max-width: 1200px;
+                margin: 70px auto -10px auto;
+                h2 {
+                    text-align: center;
+                    padding-bottom: 80px;
+                }
+                p {
+                    padding-bottom: 50px;
+                }
+                span {
+                    font-size: 2.3rem;
+                    font-weight: 600;
+                }
+                a {
+                    font-size: 2.3rem;
+                    color: black;
+                }
+                a:hover {
+                    font-weight: 600;
+                }
+            }
+            
+        }
+        .home-project {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            h2 {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .first-menu-item {
+                border-top: 1px solid #11181E;
+            }
+            .menu-item {
+                height: 170px;
+                border-bottom: 1px solid #11181E;
+                text-decoration: none;
+                position: relative;
+                .span-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 100%;
+                    margin: 0 50px;
+                    /*
+                    span {
+                        mix-blend-mode: difference;
+                    }
+                    */
+                    span:nth-child(1) {
+                        font-family: 'Trirong', serif;
+                        font-size: 4.8rem;
+                        color: black;
+                    }
+                    span:nth-child(2) {
+                        font-family: 'Karla', sans-serif;
+                        font-size: 2.4rem;
+                        color: black;
+                    }
+                }
+                .hover-reveal {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 550px;
+                    height: 300px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translate(0, 300px);
+                    transition: 0.2s ease-out;
+                    .hover-reveal_inner {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        will-change: transform;
+                        overflow: hidden;
+                        .hover-reveal_img {
+                            background-size: cover;
+                            background-position: 50% 50%;
+                            transform-origin: 50% 50%;
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            will-change: transform;
+                            transform: scale(0.8, 0.8);
+                            transition: 1.5s transform;
+
+                        }
+                        .hover-reveal-one{
+                            background-image: url(../img/projects/medT1.jpg);
+                        }
+                        .hover-reveal-two{
+                            background-image: url(../img/JPO1.jpg);
+                        }
+                        .hover-reveal-three{
+                            background-image: url(../img/projects/devBack1.jpg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #181818;
+        color: white;
+        .footer-top {
+            @include mixin.flexcenter();
+            padding: 70px;
+            .footer-link {
+                width: 50%;
+                padding-right: 160px;
+                border-right: 1px solid #3F3F3F;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    li {
+                        list-style: none;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-family: 'Pathway Gothic One', sans-serif;
+                            font-size: 5rem;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                width: 50%;
+                padding-left: 160px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    color: white;
+                    text-decoration: none;
+                    p {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        span {
+                            display: inline-block;;
+                            transform: translateX(-100%);
+                            transition: transform 0.2s ease-out;
+                            visibility: hidden;
+                            font-size: 2.3rem;
+                            font-family: "Karla", sans-serif;
+                        }
+                    }
+                    img {
+                        width: 36px;
+                        transition: all 0.2s ease-out;
+                    }
+                }
+                a:hover {
+                    p {
+                        span {
+                            transform: translateX(0);
+                            visibility: visible;
+                        }
+                    }
+                    img {
+                        filter: drop-shadow(0px 3px 2px rgba(229, 229, 229, 0.16));
+                        transform: translateY(-3px);
+                    }
+                }
+                a:not(:hover) {
+                    p {
+                        span {
+                            transform: translateX(-100%);
+                            visibility: visible;
+                        }
+                    }
+                    img {
+                        filter: drop-shadow(0px 3px 2px rgba(229, 229, 229, 0));
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px 20px;
+            p {
+                font-size: 1.6rem;
+                font-weight: 200;
+            }
+            img {
+                width: 36px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}@media screen and (max-width: 1024px) {
+    body {
+        main {
+            .bio {
+                div {
+                    margin: 70px 50px -10px 50px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    
+    *, ::after, ::before {
+        font-size: 7px;
+    }
+
+    body {
+
+        #menu {
+            div {
+                a {
+                    justify-content: center !important;
+                }
+            }
+        }
+        main {
+            .hero {
+                height: 82vh;
+                padding-top: 70px;
+                #heroTxt {
+                    max-width: 350px;
+                    .word {
+                        .char {
+                            font-size: 10rem;
+                        }
+                    }
+                }
+                .heroBottom {
+                    max-width: 340px;
+                    transform: translateY(0);
+                    .heroImg1{
+                        width: 70px;
+                        animation: go2top 1.5s infinite;
+                    }
+                    .heroImg2{
+                        width: 120px;
+                    }
+                }
+            }
+            .bio {
+                div {
+                    padding: 0 30px;
+                }
+            }
+            .home-project {
+                max-width: 365px;
+                .span-wrapper {
+                    span:nth-child(1) {
+                        font-size: 2.5rem !important;
+                    }
+                    span:nth-child(2) {
+                        font-size: 1.6rem !important;
+                    }
+                }
+            }
+        }
+
+
+
+
+        .hover-reveal {
+            display: none;
+        }
+
+        footer {
+            .footer-top {
+                padding: 50px !important;
+            }
+            .footer-link {
+                padding-right: 60px !important;
+            }
+            .footer-logo {
+                padding-left: 60px !important;
+            }
+        }
+    }
+    
 }
