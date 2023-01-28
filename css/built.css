@@ -242,7 +242,6 @@ body main .home-project .menu-item .span-wrapper {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  margin: 0 20px;
   /*
   span {
       mix-blend-mode: difference;
@@ -377,6 +376,7 @@ body footer .footer-bottom img {
   }
   body main .hero .heroBottom .heroImg1 {
     width: 70px;
+    height: fit-content;
     animation: go2top 1.5s infinite;
   }
   body main .hero .heroBottom .heroImg2 {
@@ -408,4 +408,4 @@ body footer .footer-bottom img {
   }
 }
 
-/*# sourceMappingURL=build.css.map */
+/*# sourceMappingURL=built.css.map */
