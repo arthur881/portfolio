@@ -529,6 +529,9 @@ body {
                 }
                 .project-info {
                     width: 100%;
+                    .project-info-p {
+                        min-height: auto;
+                    }
                 }
             }
         }

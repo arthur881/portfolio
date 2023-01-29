@@ -465,6 +465,9 @@ body footer .footer-bottom img {
   body main .project .project-info {
     width: 100%;
   }
+  body main .project .project-info .project-info-p {
+    min-height: auto;
+  }
   body footer .footer-top {
     padding: 50px !important;
   }

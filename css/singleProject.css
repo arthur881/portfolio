@@ -259,14 +259,41 @@ p > a:hover {
         width: 300px !important;
     }
 }
-@media screen and (max-width: 900px) and (max-height:425px){
-
-    /*
+@media screen and (min-height: 425px) {
     .flipUrPhone {
         opacity: 0;
         pointer-events: none;
+        display: none;
     }
-    */
+}
+@media screen and (max-width: 425px) {
+    .flipUrPhone {
+        opacity: 1;
+        pointer-events: auto;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) and (max-height:425px){
+
+
+    .flipUrPhone {
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+    }
+    .container {
+        display: block;
+    }
+
     .slide-one div {
         gap: 160px;
         margin-right: 35px;
