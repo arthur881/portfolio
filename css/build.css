@@ -184,7 +184,6 @@ body main .hero .heroBottom {
 }
 body main .hero .heroBottom .heroImg1 {
   width: 70px;
-  height: fit-content;
   animation: go2top 1.5s infinite;
 }
 body main .hero .heroBottom .heroImg2 {
@@ -396,6 +395,9 @@ body footer .footer-bottom img {
   body main .bio div {
     margin: 70px 50px -10px 50px;
   }
+  body main .home-project .menu-item .span-wrapper span:nth-child(2) {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 425px) {
   *, ::after, ::before {
@@ -426,10 +428,13 @@ body footer .footer-bottom img {
     width: 120px;
   }
   body main .bio div {
-    padding: 0 30px;
+    padding: 0 10px;
   }
   body main .home-project {
     max-width: 365px;
+  }
+  body main .home-project .span-wrapper {
+    margin: 0 !important;
   }
   body main .home-project .span-wrapper span:nth-child(1) {
     font-size: 2.5rem !important;
